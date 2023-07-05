@@ -17,7 +17,7 @@ export default function Home() {
           <h1 className="scroll-m-20 text-3xl md:text-4xl max-w-[500px] leading-loose font-extrabold tracking-tight lg:text-7xl">
             Welcome to{" "}
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-600">
-              Prem Kumar's
+              {` Prem Kumar's`}
             </span>{" "}
             Portfolio
           </h1>
