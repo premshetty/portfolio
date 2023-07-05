@@ -27,6 +27,9 @@ export default function NavBar() {
           <Link href={"/"}> Home</Link>
         </Button>
         <Button variant="link">About</Button>
+        <Button variant="link">
+          <Link href="#skills"> Skills</Link>
+        </Button>
         <Button variant="link">Experience</Button>
         <Button variant="link">Projects</Button>
       </div>
@@ -40,6 +43,9 @@ export default function NavBar() {
             <Link href={"/home"}> Home</Link>
           </Button>
           <Button variant="link">About</Button>
+          <Button variant="link">
+            <Link href="#skills"> Skills</Link>
+          </Button>
           <Button variant="link">Experience</Button>
           <Button variant="link">Projects</Button>
         </div>

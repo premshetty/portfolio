@@ -3,7 +3,7 @@ import { ThemeProvider } from "../../ThemeProvider";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       <Component {...pageProps} />
     </ThemeProvider>
   );
