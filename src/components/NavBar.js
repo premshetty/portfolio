@@ -14,9 +14,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function NavBar() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const [show, setShow] = React.useState(false);
-
+  console.log(theme);
   return (
     <div className="px-3 py-2 w-full m-auto flex justify-between items-center">
       <Link href={"/"}>

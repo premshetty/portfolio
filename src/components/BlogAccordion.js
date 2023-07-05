@@ -40,7 +40,13 @@ const blogChapters = [
 
 const BlogAccordion = () => {
   return (
-    <div className="md:min-h-screen flex md:w-1/2 items-center justify-center mx-auto py-5 md:py-0 px-10">
+    <div className="md:min-h-screen flex flex-col md:w-1/2 mt-32 mx-auto py-5 md:py-0 px-10">
+      <h1
+        className="scroll-m-20 pt-5 text-3xl p-10
+      text-center md:text-4xl  leading-[2] font-extrabold tracking-wide lg:text-5xl"
+      >
+        Why I Choose Frontend?
+      </h1>
       <Accordion type="multiple" collapsible className="w-full">
         {blogChapters.map(({ content, heading, id }) => {
           return (
