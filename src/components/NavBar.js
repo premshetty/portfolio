@@ -26,12 +26,18 @@ export default function NavBar() {
         <Button variant="link">
           <Link href={"/"}> Home</Link>
         </Button>
-        <Button variant="link">About</Button>
+        <Link href="#contact">
+          <Button variant="link">Contact</Button>
+        </Link>
         <Button variant="link">
           <Link href="#skills"> Skills</Link>
         </Button>
-        <Button variant="link">Experience</Button>
-        <Button variant="link">Projects</Button>
+        <Link href="#experience">
+          <Button variant="link">Experience</Button>
+        </Link>
+        <Link href="#projects">
+          <Button variant="link">Projects</Button>
+        </Link>
       </div>
       {show && (
         <div className="absolute top-0 z-20 p-5 left-0 h-full  flex flex-col gap-6 w-full bg-background md:hidden items-center">
@@ -40,14 +46,20 @@ export default function NavBar() {
             className="h-8 w-8 right-3 absolute"
           />
           <Button className="mt-5" variant="link">
-            <Link href={"/home"}> Home</Link>
+            <Link href={"/"}> Home</Link>
           </Button>
-          <Button variant="link">About</Button>
+          <Link href="#contact">
+            <Button variant="link">Contact</Button>
+          </Link>
           <Button variant="link">
             <Link href="#skills"> Skills</Link>
           </Button>
-          <Button variant="link">Experience</Button>
-          <Button variant="link">Projects</Button>
+          <Link href="#experience">
+            <Button variant="link">Experience</Button>
+          </Link>
+          <Link href="#projects">
+            <Button variant="link">Projects</Button>
+          </Link>
         </div>
       )}
       <div className="flex gap-4 items-center flex-row-reverse">

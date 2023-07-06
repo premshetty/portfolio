@@ -41,7 +41,8 @@ const Skills = () => {
     >
       <h1
         className="scroll-m-20 pt-5 text-3xl
-      text-white dark:text-black text-center md:text-4xl  leading-loose font-extrabold tracking-wide lg:text-5xl"
+      text-white dark:text-black text-center md:text-4xl  leading-loose font-extrabold tracking-wide lg:text-5xl
+      "
       >
         Skills
       </h1>

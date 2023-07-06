@@ -40,10 +40,11 @@ const blogChapters = [
 
 const BlogAccordion = () => {
   return (
-    <div className="md:min-h-screen flex flex-col md:w-1/2 mt-32 mx-auto py-5 md:py-0 px-10">
+    <div className="flex flex-col md:w-1/2 mt-32 mx-auto py-5 md:py-0 px-10">
       <h1
         className="scroll-m-20 pt-5 text-3xl p-10
-      text-center md:text-4xl  leading-[2] font-extrabold tracking-wide lg:text-5xl"
+      text-center md:text-4xl  leading-[2] font-extrabold tracking-wide lg:text-5xl
+      animate-text-color bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent"
       >
         Why I Choose Frontend?
       </h1>

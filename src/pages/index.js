@@ -4,6 +4,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Skills from "@/components/Skills";
 import BlogAccordion from "@/components/BlogAccordion";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +40,9 @@ export default function Home() {
       </div>
       <Skills />
       <BlogAccordion />
+      <Projects />
+      <Experience />
+      <Contact />
     </div>
   );
 }
