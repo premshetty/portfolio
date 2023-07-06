@@ -45,20 +45,30 @@ export default function NavBar() {
             onClick={() => setShow(!show)}
             className="h-8 w-8 right-3 absolute"
           />
-          <Button className="mt-5" variant="link">
+          <Button
+            onClick={() => setShow(!show)}
+            className="mt-5"
+            variant="link"
+          >
             <Link href={"/"}> Home</Link>
           </Button>
           <Link href="#contact">
-            <Button variant="link">Contact</Button>
+            <Button onClick={() => setShow(!show)} variant="link">
+              Contact
+            </Button>
           </Link>
-          <Button variant="link">
+          <Button onClick={() => setShow(!show)} variant="link">
             <Link href="#skills"> Skills</Link>
           </Button>
           <Link href="#experience">
-            <Button variant="link">Experience</Button>
+            <Button onClick={() => setShow(!show)} variant="link">
+              Experience
+            </Button>
           </Link>
           <Link href="#projects">
-            <Button variant="link">Projects</Button>
+            <Button onClick={() => setShow(!show)} variant="link">
+              Projects
+            </Button>
           </Link>
         </div>
       )}

@@ -51,7 +51,7 @@ const Experience = () => {
                 <div className="grid grid-cols-3 gap-3 mt-4">
                   {skills.map((skill) => (
                     <Card
-                      className=" h-10 flex justify-center items-center p-2"
+                      className=" h-10 flex  justify-center items-center p-2 text-xs md:text-base whitespace-nowrap overflow-hidden text-clip"
                       key={skill}
                     >
                       {skill}

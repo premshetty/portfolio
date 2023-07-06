@@ -46,10 +46,10 @@ const Skills = () => {
       >
         Skills
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:w-1/2 gap-5 mx-auto mt-10">
+      <div className="md:grid flex flex-wrap justify-center md:grid-cols-3 lg:grid-cols-4 md:w-1/2 gap-5 mx-auto mt-10">
         {SkillList.map((skill) => {
           return (
-            <Card key={skill} className="w-[100px] p-3">
+            <Card key={skill} className="w-[50px] md:w-[100px] p-3">
               {skill()}
             </Card>
           );

@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="md:min-h-screen flex flex-col  mt-10     mx-auto py-5 md:py-0 px-10"
+      className="min-h-screen flex flex-col  mt-10     mx-auto py-5 md:py-0 px-10"
     >
       <h1
         className="scroll-m-20 pt-5 text-3xl p-10
