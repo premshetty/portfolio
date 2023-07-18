@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -7,14 +7,17 @@ import { GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useToast } from "./ui/use-toast";
+import { Toaster } from "./ui/toaster";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setisLoadin] = useState(false)
   const { toast } = useToast();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setisLoadin(true)
     // Perform form validation
 
     // Create an API request to your backend endpoint to send the email
@@ -30,7 +33,7 @@ const Contact = () => {
       if (response.ok) {
         toast({
           title: "Message Sent",
-          description: "Thank you for contacting us!",
+          description: "Thank you for contacting Me!",
           variant: "default",
         });
       } else {
@@ -48,8 +51,14 @@ const Contact = () => {
         variant: "destructive",
       });
     }
+
+    setName('')
+    setEmail('')
+    setMessage('')
+    setisLoadin(false)
   };
-  return (
+  return (<>
+    <Toaster />
     <div
       id="contact"
       className="min-h-screen flex flex-col  mt-10     mx-auto py-5 md:py-0 px-10"
@@ -62,23 +71,26 @@ const Contact = () => {
       >
         Get in touch
       </h1>
-      <Card className="h-full p-5 flex flex-col gap-5 md:p-10  w-full md:w-3/4 lg:w-1/2 mx-auto">
+      <form className="h-full p-5 flex flex-col gap-5 md:p-10  w-full md:w-3/4 lg:w-1/2 mx-auto">
         <Input
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
+          name="name"
           placeholder="name"
         />
         <Input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
+          name="email"
           placeholder="Email"
         />
         <Textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="h-[200px]"
+          name="message"
           placeholder="Type your message here."
         />
         <Button
@@ -86,11 +98,11 @@ const Contact = () => {
           className="bg-green-500"
           variant="secondary"
         >
-          Send Message
+          {isLoading ? "Sending Message..." : "Send Message"}
         </Button>
-      </Card>
+      </form>
       <div className="flex gap-3 justify-center items-center w-full md:w-3/4 lg:w-1/2 mx-auto my-10">
-        <Link href="https://www.linkedin.com/m/in/premreact">
+        <Link about="blank" href="https://www.linkedin.com/m/in/premreact">
           <Card className="p-3">
             <LinkedinIcon />
           </Card>
@@ -107,6 +119,7 @@ const Contact = () => {
         </Link>
       </div>
     </div>
+  </>
   );
 };
 
