@@ -2,7 +2,7 @@ export const experienceList = [
   {
     id: 1,
     companyName: "Antino Labs",
-    period: "Dec 2021 - Jun 2023 · 1 yr 7 mos",
+    period: "Jul 2022 - Jun 2023 · 1 yr",
     position: "React Developer",
     location: "Gurugram, Haryana, India",
     skills: [
@@ -27,7 +27,7 @@ export const experienceList = [
   {
     id: 2,
     companyName: "TREATMENT TRAVELLER ",
-    period: "Apr 2020 - Dec 2021 · 1 yr 9 mos",
+    period: "Dec 2020 - Jul 2022 · 1 yr 8 mos",
     position: "Frontend Web Developer",
     location: "Noida, Uttar Pradesh, India",
     skills: [
